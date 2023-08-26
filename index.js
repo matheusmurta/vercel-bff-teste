@@ -16,7 +16,7 @@ app.get('/api/data', (req, res) => {
 });
 
 app.get('/', (req, res) => {
-    res.send('Olá, mundo! Este é o endpoint GET simples XXXXXXXXX.');
+    res.send('Olá, mundo! Este é o endpoint GET simples YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY.');
   });
 
 app.listen(PORT, () => {
