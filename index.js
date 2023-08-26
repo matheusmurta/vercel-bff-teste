@@ -1,6 +1,14 @@
 const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3000;
+const cors = require('cors');
+
+app.use(cors({
+    origin: 'https://vercel-fe-test.vercel.app',
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: true
+}));
 
 app.get('/api/data', (req, res) => {
     const data = {
