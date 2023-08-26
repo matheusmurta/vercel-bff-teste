@@ -16,3 +16,13 @@ app.get('/', (req, res) => {
 app.listen(PORT, () => {
     console.log(`Servidor rodando na porta ${PORT}`);
 });
+
+
+app.post('/api/postData', (req, res) => {
+    const receivedData = req.body;
+    console.log('Dados recebidos:', receivedData);
+    
+    res.json({
+        message: 'Dados recebidos com sucesso!', data:receivedData
+    });
+});
