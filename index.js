@@ -9,6 +9,10 @@ app.get('/api/data', (req, res) => {
     res.json(data);
 });
 
+app.get('/', (req, res) => {
+    res.send('Olá, mundo! Este é o endpoint GET simples.');
+  });
+
 app.listen(PORT, () => {
     console.log(`Servidor rodando na porta ${PORT}`);
 });
