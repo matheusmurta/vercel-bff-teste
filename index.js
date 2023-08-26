@@ -5,9 +5,7 @@ const cors = require('cors');
 
 app.use(cors({
     origin: 'https://vercel-fe-test.vercel.app',
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    allowedHeaders: ['Content-Type', 'Authorization'],
-    credentials: true
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
 }));
 
 app.get('/api/data', (req, res) => {
@@ -18,7 +16,7 @@ app.get('/api/data', (req, res) => {
 });
 
 app.get('/', (req, res) => {
-    res.send('Olá, mundo! Este é o endpoint GET simples.');
+    res.send('Olá, mundo! Este é o endpoint GET simples XXXXXXXXX.');
   });
 
 app.listen(PORT, () => {
